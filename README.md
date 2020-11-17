@@ -17,7 +17,7 @@ And then, in the `fileToRender.ejs` use this syntax to display the value passed:
 <%= variableName %>
 ```
 
-**Note that the file to render must have "ejs" extension, not "html".**
+**Note that the file to render must have `ejs` extension, not `html`.**
 
 ## Rubric:
 
