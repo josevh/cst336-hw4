@@ -9,8 +9,8 @@
         </p>
         <pre><code>
 1 | GET /search?q=test HTTP/2
-2 | Host: www.google.com
-3 | User-Agent: curl/7.54.0
+2 | Host: <%= host %>
+3 | User-Agent: <%= userAgent %>
 4 | Accept: */*
         </code></pre>
 
@@ -22,8 +22,8 @@
         <p>The contents of the HTTP message above contain (in order):</p>
         <ol>
             <li>The request method (<code>"GET"</code>), the resource path (<code>"/search?q=test"</code>), and the HTTP version (<code>"HTTP/2"</code>)</li>
-            <li>The website host name (<code>"www.google.com"</code>)</li>
-            <li>Request headers (<code>"User-Agent: curl/7.54.0"</code> and <code>"Accept: */*"</code>)</li>
+            <li>The website host name (<code>"<%= host %>"</code>)</li>
+            <li>Request headers (<code>"User-Agent: <%= userAgent %>"</code> and <code>"Accept: */*"</code>)</li>
         </ol>
 
         <p>The underlying protocol to HTTP is TCP, we'll read about it in the <a href="/transport.html">transport layer</a>.</p>
