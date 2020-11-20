@@ -1,0 +1,55 @@
+<main id="transport">
+    The transport layer of the internet is the mechanism by which applications on different hosts communicate. 
+    To do this, they typically will employ two of the protocols available at this layer: TCP and UDP.
+
+    <h2>UDP</h2>
+    <p>
+        <abbr title="User Datagram Protocol">UDP</abbr> is a simple protocol that offers applications nothing but the bare mininum to establish a connection. 
+        UDP is considered to be <em>connectionless</em> because all packets it sends are considered to be independent and not part of a flow of related packets. 
+        UDP is also an <em>unreliable</em> protocol; it makes no guarantees of delivery to the applications that use it.
+    </p>
+
+    <figure>
+        <img src="/img/pexels-cottonbro-5077463-resized.jpg" alt="Person on a video call on a phone">
+        <div>Photo by <a href="https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">cottonbro</a> from <a href="https://www.pexels.com/photo/woman-in-white-shirt-holding-iphone-6-5077463/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a>.</div>
+    </figure>
+
+    <p>
+        UDP is typically used by applications that do not want the overhead that comes with reliable transmission as well as applications that can tolerate <em>some</em> packet loss. 
+        VOIP and video-chat services are examples of applications that might employ UDP as their transmission protocol. In VOIP, some packet loss is tolerable because 
+        there is a continuous stream of data being sent as voice is being processed and sent over the network.
+    </p>
+
+    <h2>TCP</h2>
+    <p>
+        <abbr title="Transmission Control Protocol">TCP</abbr> is another transport layer protocol that comes with a few bells and whistles. 
+        As opposed to UDP, TCP offers reliable service and is connection-based. In addition to that, TCP also has some built-in congestion control 
+        mechanisms that make it preferable to use if a network link if facing a high level of congestion.
+    </p>
+
+    <p>
+        A common use of TCP is in something we're already familiar with, HTTP! TCP is the protocol that makes web browsing possible. 
+        It provides the reliable data transfer necessary for web browsers to retrieve web pages from servers. The connection-based service it offers 
+        also allows the existence of persistent connections used by browsers to speed up our browsing. Only accounting for HTTP, we see that TCP
+        is indispensible for a well-functioning internet.
+    </p>
+
+    <figure>
+        <img src="/img/pexels-cottonbro-3585014-resized.jpg" alt="Person on a video call on a phone">
+        <div>Photo by <a href="https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">cottonbro</a> from <a href="https://www.pexels.com/photo/woman-in-white-shirt-holding-iphone-6-5077463/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a>.</div>
+    </figure>
+
+    <p>
+        Just as applications depend on the protocols found in the transport layer, we will see that the protocols discussed on this page 
+        rely on the protocols offered by the layer beneath it; the <a href="/network.html">network layer</a>.
+    </p>
+</main>
+
+<div id="footnotes">
+    <hr>
+    <h4>Sources</h4>
+    <ul>
+        <li><a href="http://www.princeton.edu/~chiangm/transport.pdf">[1]</a> Transport Layer</li>
+        <li>[2] Computer Networking: A Top-Down Approach (7th Ed.) by J. F. Kurose and K. W. Ross</li>
+    </ul>
+</div>

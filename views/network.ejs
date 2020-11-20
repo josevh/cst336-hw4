@@ -1,0 +1,73 @@
+<main id="network">
+    <p>
+        The network layer is similar to the transport layer. Recall that the transport layer allows applications to communicate. 
+        The network layer allows <em>hosts</em> (or computers/phones/etc.) to communicate. 
+        The protocol in this layer that we're most interested in is the Internet Protocol (IP).
+    </p>
+
+    <h2>IP Addressing</h2>
+    <p>
+        You may have heard of this protocol in reference to its addressing feature. Every host that connects to a network will have 
+        an IP address. This address is used to enable hosts to reference each other and for routers to send your packets in the right direction. 
+        You may recognize them, they look like:
+    </p>
+
+    <pre><code>
+192.168.1.5
+    </code></pre>
+
+    <p>
+        Every number is referred to as a <em>quadrant</em>. In IP version 4, the entire IP address is a 32-bit unsigned integer, each quadrant is an 8-bit integer. 
+        In binary form, the above IP address looks like:
+    </p>
+    <pre><code>
+11000000.10101000.00000001.00000101
+    </code></pre>
+
+    <figure>
+        <img src="/img/pexels-cottonbro-5474028-resized.jpg" alt="Man with binary numbers projected on his face">
+        <div>Photo by <a href="https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">cottonbro</a> from <a href="https://www.pexels.com/photo/man-with-binary-code-projected-on-his-face-5474028/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a>.</div>
+    </figure>
+
+    <p>
+        There is a version 6 of IP that was invented to solve the problem of the world running out of unique IP addresses.
+        Suffice it to say that IPv6 has addresses of 128bits which make it unlikely we'll run out of IP addresses again any time soon.
+    </p>
+
+    <h2>IP and the Web</h2>
+    <p>
+        When you submit a request in a web browser for the site <code>https://www.google.com</code>, many things happen under the hood 
+        in order for your computer to understand what you're asking of it. The first thing it does is figure out <em>where</em> 
+        <code>www.google.com</code> is located. It does this by making use of <abbr title="DNS">Domain Name System</abbr> to
+        convert the domain name into an IP address. You can do this manually on your computer using <code>nslookup</code>:
+    </p>
+
+    <pre><code>
+$ nslookup www.google.com
+Server:               127.0.0.53
+Address:        127.0.0.53#53
+
+Non-authoritative answer:
+Name:   www.google.com
+Address: 172.217.11.164
+Name:   www.google.com
+Address: 2607:f8b0:4007:804::2004
+    </code></pre>
+
+    <p>
+        With this information, your computer knows to send the HTTP request to a computer with an IP address of <code>172.217.11.164</code>. 
+        The computer will send the packet to its gateway router which will look at the IP address for <code>www.google.com</code> and determine 
+        how to route the request in order to get it to its destination efficiently.
+    </p>
+
+</main>
+
+<div id="footnotes">
+    <hr>
+    <h4>Sources</h4>
+    <ul>
+        <li><a href="https://web.cs.wpi.edu/~cs4514/b98/week4-nl/week4-nl.html">[1]</a> Network Layer</li>
+        <li>[2] Computer Networking: A Top-Down Approach (7th Ed.) by J. F. Kurose and K. W. Ross</li>
+        
+    </ul>
+</div>

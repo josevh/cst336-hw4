@@ -1,0 +1,41 @@
+<main id="application">
+    <div>
+        <p>The application layer contains the protocols that enable communication between apps. 
+            Most intereting to CST336 is the <strong>HTTP</strong> protocol 
+            which operates at this layer.
+            <br><br>
+            Applications send <em>messages</em> to each other. These messages contain the HTTP 
+            requests and responses. For example, a request message:
+        </p>
+        <pre><code>
+1 | GET /search?q=test HTTP/2
+2 | Host: www.google.com
+3 | User-Agent: curl/7.54.0
+4 | Accept: */*
+        </code></pre>
+
+        <figure>
+            <img src="/img/pexels-photomix-company-218717-resized.jpg" alt="Mobile device internet browser">
+            <div>Photo by <a href="https://www.pexels.com/@wdnet?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">PhotoMIX Company</a> from <a href="https://www.pexels.com/photo/black-samsung-tablet-display-google-browser-on-screen-218717/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a>.</div>
+        </figure>
+
+        <p>The contents of the HTTP message above contain (in order):</p>
+        <ol>
+            <li>The request method (<code>"GET"</code>), the resource path (<code>"/search?q=test"</code>), and the HTTP version (<code>"HTTP/2"</code>)</li>
+            <li>The website host name (<code>"www.google.com"</code>)</li>
+            <li>Request headers (<code>"User-Agent: curl/7.54.0"</code> and <code>"Accept: */*"</code>)</li>
+        </ol>
+
+        <p>The underlying protocol to HTTP is TCP, we'll read about it in the <a href="/transport.html">transport layer</a>.</p>
+    </div>
+</main>
+
+<div id="footnotes">
+    <hr>
+    <h4>Sources</h4>
+    <ul>
+        <li id="footnote-1"><a href="https://www.cloudflare.com/learning/network-layer/what-is-the-network-layer/">[1]</a> What is the network layer? | Network vs. Internet layer</li>
+        <li><a href="http://www.theshulers.com/whitepapers/internet_whitepaper/index.html#http">[2]</a> How Does the Internet Work?</li> 
+        <li><a href="https://medium.com/better-programming/the-anatomy-of-an-http-request-728a469ecba9">[3]</a> Anatomy of an HTTP Request</li>
+    </ul>
+</div>

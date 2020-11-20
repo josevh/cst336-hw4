@@ -1,0 +1,106 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.25em;
+    box-sizing: border-box;
+    background-color: #fafafa;
+
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 45px;
+}
+
+a {
+    text-decoration: none;
+    color: #e91e63;
+}
+
+img {
+    border-radius: 10px;
+}
+
+figure {
+    margin: 15px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure div {
+    font-size: 0.66em;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav li a {
+    padding: 0.5em;
+    text-decoration: none;
+}
+
+nav li a.current {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+nav li:first-of-type a {
+    padding-left: 0px;
+}
+
+footer {
+    margin: 45px auto 15px;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+main {
+    padding: 15px 0;
+}
+
+#home > div {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+}
+
+#home > div.left {
+    width: calc(100% - 210px)
+}
+
+#home > div.right {
+    width: 190px;
+}
+
+#footnotes {
+    font-size: 0.66em;
+}
+
+code {
+    background-color: #212121;
+    color: #FAFAFA;
+    padding: 0 2.5px;
+    border-radius: 5px;
+
+}
+
+pre > code {
+    display: block;
+    padding: 5px 15px;
+}
